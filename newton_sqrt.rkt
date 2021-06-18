@@ -10,5 +10,4 @@
     (if (good-enough? guess)
         guess
         (sqrt-iter (improve guess))))
-  (sqrt-iter 1.0)
-)
+  (sqrt-iter 1.0))
