@@ -1,0 +1,20 @@
+; O(sqrt(n)) bc only need to iterably check 2 to floor(sqrt n)
+
+(define (prime? n)
+  (= n (smallest-divisor n))
+)
+
+(define (smallest-divisor n)
+  (find-divisor n 2)
+)
+
+(define (find-divisor n test)
+  (cond ((> (square test) n) n)
+        ((divides? test n) test)
+        (else (find-divisor n (+ test 1)))
+  )
+)
+
+(define (square n)
+  {* n n}
+)
