@@ -10,4 +10,6 @@
     (if (good-enough? guess)
         guess
         (sqrt-iter (improve guess))))
+  ; keep averaging x and x/guess to get closer to the answer
+  ; good enough is when guess^2 is within 0.001 of x
   (sqrt-iter 1.0))
